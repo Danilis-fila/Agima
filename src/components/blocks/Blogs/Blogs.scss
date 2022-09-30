@@ -1,0 +1,56 @@
+.blogs {
+  padding: 60px 3.1% 0 3.4%;
+  margin: 0 0 83px 5.5%;
+  background-color: #fff;
+
+  :nth-child(3) {
+    margin-right: 0;
+  }
+
+  &__title {
+    font-family: 'Gilroy-Bold';
+    font-size: 57px;
+    margin: 0 0 50px 0;
+    position: relative;
+    font-weight: 700;
+  }
+
+  &__title-link {
+    position: absolute;
+    right: 3px;
+
+    svg {
+      width: 50px;
+      height: 16px;
+      fill: #202020;
+      transition: fill .6s, transform .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      
+      &:hover {
+        fill: #01ac6a;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+}
+
+@media (max-width: 1439px) {
+  .blogs {
+    padding: 33px 2.4% 0 2.9%;
+    margin: 0 0 78px 5.5%;
+
+    &__title {
+      font-size: 44px;
+      margin: 0 0 29px;
+    }
+    
+    &__title-link {
+      svg {
+        width: 30px;
+        height: 9.6px;
+      }
+    }
+  }
+}

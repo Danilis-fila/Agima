@@ -1,0 +1,114 @@
+@mixin footerIcon($bg-image, $bg-image-hover) {
+  background: url($bg-image) no-repeat center;
+
+  &:hover {
+    background: url($bg-image-hover) no-repeat center;
+
+    transition: background-image 0.6s, transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.footer {
+  height: 262px;
+  padding: 70px 3.1% 0 9%;
+  background-color: #01AC6A;
+  position: relative;
+  z-index: 1;
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    font-size: 16px;
+    margin: 0 3.19% 0 0;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: #202020;
+        transition: color 0.8s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    position: absolute;
+    right: 47px;
+    top: 70px;
+  }
+
+  &__info {
+    font-family: 'Gilroy-Bold';
+    position: absolute;
+    bottom: 0;
+    bottom: 75px;
+  }
+
+  &__icon {
+    margin: 0 0 0 18px;
+
+    a {
+      width: 20px;
+      height: 18px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--world {
+      @include footerIcon('../../../../public/images/footer/world.svg', '../../../../public/images/footer/world-hover.svg')
+    }
+
+    &--behance {
+      @include footerIcon('../../../../public/images/footer/behance.svg', '../../../../public/images/footer/behance-hover.svg')
+    }
+
+    &--vk {
+      @include footerIcon('../../../../public/images/footer/vk.svg', '../../../../public/images/footer/vk-hover.svg')
+    }
+
+    &--tg {
+      @include footerIcon('../../../../public/images/footer/tg.svg', '../../../../public/images/footer/tg-hover.svg')
+    }
+
+    &--habr {
+      @include footerIcon('../../../../public/images/footer/habr.svg', '../../../../public/images/footer/habr-hover.svg')
+    }
+
+    &--v {
+      @include footerIcon('../../../../public/images/footer/v.svg', '../../../../public/images/footer/v-hover.svg')
+    }
+
+    &--twitter {
+      @include footerIcon('../../../../public/images/footer/twitter.svg', '../../../../public/images/footer/twitter-hover.svg')
+    }
+
+    &--youtube {
+      @include footerIcon('../../../../public/images/footer/youtube.svg', '../../../../public/images/footer/youtube-hover.svg')
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .footer {
+    height: 202px;
+    padding: 60px 2.44140625% 0 8.7890625%;
+
+    &__link {
+      font-size: 12px;
+      margin-right: 32px;
+    }
+
+    &__info {
+      font-size: 12px;
+    }
+
+    &__icons {
+      right: 47px;
+      top: 70px;
+    }
+  }
+}
